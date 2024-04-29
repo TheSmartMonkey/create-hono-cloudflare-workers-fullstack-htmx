@@ -19,11 +19,6 @@ export const renderer = jsxRenderer(({ children }) => {
         <title>Hono + htmx</title>
       </head>
       <body>
-        <h1
-          class="flex justify-center mb-20 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
-        >
-          We invest in the world’s potential
-        </h1>
         ${children}
       </body>
     </html>

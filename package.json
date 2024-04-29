@@ -1,13 +1,16 @@
 {
   "scripts": {
-    "start": "wrangler dev --live-reload src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "start": "wrangler dev --live-reload src/server.tsx",
+    "deploy": "wrangler deploy --minify src/server.tsx"
   },
   "dependencies": {
     "hono": "^4.2.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240403.0",
-    "wrangler": "^3.47.0"
+    "wrangler": "^3.47.0",
+    "tsconfig-paths": "^4.1.1",
+    "typescript": "^4.8.3",
+    "ts-node": "^10.9.1"
   }
 }

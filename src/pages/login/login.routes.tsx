@@ -1,15 +1,15 @@
 import { Hono } from 'hono';
 import { getQuizFromCache } from '../../services/cache.service';
-import { Quiz } from './quiz.component';
+import { LoginPage } from './login.page';
 
-const quiz = new Hono();
+const login = new Hono();
 
-quiz.get('/', (c) => {
+login.get('/', (c) => {
   const quiz = getQuizFromCache();
-  return c.render(<Quiz {...{ quiz }} />);
+  return c.render(<LoginPage {...{ quiz }} />);
 });
 
-quiz.post(
+login.post(
   '/form/submit',
   // zValidator(
   //   'form',
@@ -26,4 +26,4 @@ quiz.post(
   },
 );
 
-export default quiz;
+export default login;

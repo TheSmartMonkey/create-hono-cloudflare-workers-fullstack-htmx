@@ -1,11 +1,12 @@
 import { Hono } from 'hono';
 import { renderer } from '.';
-import quiz from './views/quiz/quiz.routes';
+import login from './pages/login/login.routes';
 
 const app = new Hono();
 
 app.get('*', renderer);
 
-app.route('/', quiz);
+// Routes
+app.route('/', login);
 
 export default app;
